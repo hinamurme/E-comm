@@ -7,6 +7,7 @@ import {
 import { Link } from "react-router-dom";
 
 const CartPage = () => {
+  const BaseUrl= import.meta.env.VITE_API_URL;
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const [promoCode, setPromoCode] = useState("");
@@ -64,7 +65,7 @@ const CartPage = () => {
               <tr key={item.id} className="border-b">
                 <td className="py-3 px-4">
                   <img
-                    src={item.image}
+                    src={`${BaseUrl}${item.image}`}
                     alt={item.name}
                     className="w-16 h-16 object-cover rounded"
                   />
