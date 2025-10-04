@@ -22,7 +22,7 @@ const NewCollection = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
         {kids.map((product) => (
-          <Link key={product.id} to={`/kids/${product.id}`} className="block">
+          <Link key={product.id} to={`/product/${product._id}`} className="block">
             <div className="bg-white border rounded-lg shadow-sm overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-lg flex flex-col">
               {/* Image Box */}
               <div className="w-full aspect-[3/4] flex items-center justify-center bg-gray-50">

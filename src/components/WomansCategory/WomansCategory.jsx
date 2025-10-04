@@ -29,26 +29,26 @@ const WomansCategory = () => {
       {/* Product Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
         {womenProducts.length > 0 ? (
-          womenProducts.map((product) => (
-            <Link key={product.id} to={`/product/${product.id}`}>
+          womenProducts.map((item) => (
+            <Link key={item.id} to={`/product/${item._id}`}>
               <div className="border rounded-lg shadow-sm p-3 hover:shadow-md transition flex flex-col">
                 <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md">
-                  {console.log(`${BaseUrl}${product.image}`)}
+                  {console.log(`${BaseUrl}${item.image}`)}
                   <img
-                    src={`${BaseUrl}${product.image}`}
-                    alt={product.name}
+                    src={`${BaseUrl}${item.image}`}
+                    alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
                 <h3 className="text-sm sm:text-base font-semibold mt-3 line-clamp-1">
-                  {product.name}
+                  {item.name}
                 </h3>
                 <div className="flex items-center gap-2 mt-2">
                   <span className="text-base sm:text-lg font-bold text-gray-800">
-                    {formatPrice(product.new_price)}
+                    {formatPrice(item.new_price)}
                   </span>
                   <span className="text-xs sm:text-sm line-through text-gray-400">
-                    {formatPrice(product.old_price)}
+                    {formatPrice(item.old_price)}
                   </span>
                 </div>
               </div>

@@ -7,7 +7,7 @@ import {
 import { Link } from "react-router-dom";
 
 const CartPage = () => {
-  const BaseUrl= import.meta.env.VITE_API_URL;
+  const BaseUrl = import.meta.env.VITE_API_URL;
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const [promoCode, setPromoCode] = useState("");
@@ -180,6 +180,7 @@ const CartPage = () => {
                 alt={item.name}
                 className="w-24 h-24 object-cover rounded"
               />
+              {console.log(`${BaseUrl}-------------${item.image}`)}
               <div className="flex-1">
                 <h3 className="font-semibold text-lg">{item.name}</h3>
                 <p className="text-gray-600">₹{item.price}</p>
@@ -273,13 +274,13 @@ const CartPage = () => {
         </div>
 
         {/* 📱 Mobile Fixed Checkout Bar */}
-        <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 flex justify-between items-center z-10">
-          <div className="text-lg font-semibold">Subtotal: ₹{finalTotal}</div>
-          <button
-            className="px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 transition"
+        <div className="mt-8 text-center">
+          <Link
+            to="/checkout"
+            className="bg-red-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-red-700 transition inline-block"
           >
-            Checkout
-          </button>
+            PROCEED TO CHECKOUT
+          </Link>
         </div>
       </div>
     </div>

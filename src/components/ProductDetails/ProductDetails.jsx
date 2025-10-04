@@ -9,6 +9,8 @@ const ProductDetails = () => {
   const [product, setProduct] = useState(null);
   const [mainImage, setMainImage] = useState("");
   const [selectedSize, setSelectedSize] = useState(null);
+  console.log("product", product);
+  
 
   // ✅ Fetch product from backend
   useEffect(() => {
@@ -20,6 +22,7 @@ const ProductDetails = () => {
       })
       .catch((err) => console.error("Error fetching product:", err));
   }, [id]);
+  
 
   if (!product) {
     return <div className="text-center py-20 text-lg">⏳ Loading...</div>;

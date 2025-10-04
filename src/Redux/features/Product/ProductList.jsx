@@ -32,7 +32,7 @@ const ProductList = () => {
             className="bg-white rounded-2xl shadow-md p-4 hover:shadow-xl transition transform hover:-translate-y-1"
           >
             <img
-             src={`${BaseUrl}${product.image}`}
+             src={`${BaseUrl}/api/products${product.image}`}
               alt={product.name}
               className="w-full h-48 object-cover rounded-lg mb-4"
             />

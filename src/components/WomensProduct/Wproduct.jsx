@@ -26,7 +26,7 @@ const Products = () => {
       {/* Products Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
         {data.map((item) => (
-          <Link key={item.id} to={`/product/${item.id}`} className="block">
+          <Link key={item.id} to={`/product/${item._id}`} className="block">
             <div className="bg-white border rounded-lg shadow-sm hover:shadow-lg transition duration-300 p-3 sm:p-4 flex flex-col">
               {/* Product Image */}
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md bg-gray-50">

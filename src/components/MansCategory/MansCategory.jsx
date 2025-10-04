@@ -29,7 +29,7 @@ const MansCategory = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
         {data.map((product) => (
-          <Link key={product.id} to={`/product/${product.id}`}>
+          <Link key={product.id} to={`/product/${product._id}`}>
             <div className="border rounded-lg shadow-sm p-3 hover:shadow-md transition flex flex-col">
               <div className="relative w-full aspect-[3/4] overflow-hidden rounded-md">
                 <img
